@@ -1,5 +1,5 @@
 import React from "react";
-import  ImagesSliderDemo  from "@/components/Carousel";
+import { ImagesSliderDemo } from "@/components/Carousel";
 import { AccordionDemo } from "@/components/Accordian";
 import Footer from "@/components/Footer";
 import App from "@/components/Testimonials";
