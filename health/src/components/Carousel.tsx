@@ -1,144 +1,38 @@
-"use client"
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
-import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+import { ImagesSlider } from "../components/ui/image-slider";
 
-export default function App() {
-  const [isFollowed, setIsFollowed] = React.useState(false);
-
+export function ImagesSliderDemo() {
+  const images = [
+    "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  ];
   return (
-    
-    <div>
-    <h1 className="flex justify-center items-center text-2xl font-bold md:text-4xl text-black mb-[3%]">
-      Testimonials
-    </h1>
-    <div className="flex gap-[6%] justify-center items-center w-full-screen mb-[4%]">
-    <Card className="max-w-[340px] bg-[#e3e3e3] rounded-md shadow-lg shadow-black/10">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
-    <Card className="max-w-[340px] bg-[#e3e3e3] rounded-md shadow-lg shadow-black/10">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
-    <Card className="max-w-[340px] bg-[#e3e3e3] rounded-md shadow-lg shadow-black/10">
-      <CardHeader className="justify-between">
-        <div className="flex gap-5">
-          <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-          <div className="flex flex-col gap-1 items-start justify-center">
-            <h4 className="text-small font-semibold leading-none text-default-600">Zoey Lang</h4>
-            <h5 className="text-small tracking-tight text-default-400">@zoeylang</h5>
-          </div>
-        </div>
-        <Button
-          className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
-          color="primary"
-          radius="full"
-          size="sm"
-          variant={isFollowed ? "bordered" : "solid"}
-          onPress={() => setIsFollowed(!isFollowed)}
-        >
-          {isFollowed ? "Unfollow" : "Follow"}
-        </Button>
-      </CardHeader>
-      <CardBody className="px-3 py-0 text-small text-default-400">
-        <p>
-          Frontend developer and UI/UX enthusiast. Join me on this coding adventure!
-        </p>
-        <span className="pt-2">
-          #FrontendWithZoey 
-          <span className="py-2" aria-label="computer" role="img">
-            💻
-          </span>
-        </span>
-      </CardBody>
-      <CardFooter className="gap-3">
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">4</p>
-          <p className=" text-default-400 text-small">Following</p>
-        </div>
-        <div className="flex gap-1">
-          <p className="font-semibold text-default-400 text-small">97.1K</p>
-          <p className="text-default-400 text-small">Followers</p>
-        </div>
-      </CardFooter>
-    </Card>
-    </div>
-    </div>
+    <ImagesSlider className="h-[40rem]" images={images}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className="z-50 flex flex-col justify-center items-center"
+      >
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          Healthcare One-stop <br /> One stop solution for Healthcare.
+        </motion.p>
+        <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+          <span>Join now →</span>
+          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+        </button>
+      </motion.div>
+    </ImagesSlider>
   );
 }
