@@ -1,7 +1,6 @@
 // src/app/complaint/page.tsx
 'use client';
-import toast, { Toaster } from 'react-hot-toast';
-import { Suspense, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CampaignCard } from "./campaign-card";
 import { ConnectBtn } from "./connect-btn";
@@ -9,10 +8,9 @@ import { Web3Context } from "@/context/Web3Context";
 import { CampaignForm } from "./campaign-form";
 
 const CampaignPage = () => {
-  const {getCampaigns,getUserCampaigns} = useContext(Web3Context)
+  const {getCampaigns} = useContext(Web3Context)
   const [isOpen,setIsOpen] =useState(false);
   const [campaigns,setCampaigns] = useState<any>([])
-  const [ucampaigns,setUcampaigns] = useState<any>([])
   const open=()=>{
     setIsOpen((prev)=>!prev)
   }
@@ -22,7 +20,6 @@ const CampaignPage = () => {
   
   useEffect(()=>{
     getCampaigns().then((res:any)=>setCampaigns(res.reverse()))
-    getUserCampaigns().then((res:any)=>setUcampaigns(res.reverse()))
   },[])
   
   return(
@@ -39,7 +36,6 @@ const CampaignPage = () => {
            
 ))}
         </div>
-      <Toaster />
     </div>
   )
 };

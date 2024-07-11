@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4",
     "@clerk/nextjs": "^5.1.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -46,17 +43,21 @@
     "json-server": "^1.0.0-beta.1",
     "lucide-react": "^0.379.0",
     "mirada": "^0.0.15",
+    "next": "14.2.4",
     "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
     "react-hook-form": "^7.52.0",
     "react-hot-toast": "^2.4.1",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.23.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "web3modal": "^1.9.12",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-   "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

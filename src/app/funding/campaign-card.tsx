@@ -1,12 +1,9 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { Web3Context } from "@/context/Web3Context"
-import { Close } from "@radix-ui/react-toast"
-import { Cross, CrossIcon, ReplyIcon, ShieldCloseIcon, Undo2 } from "lucide-react"
+import {  ReplyIcon } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 import { Suspense, useContext, useState } from "react"
-import toast from "react-hot-toast"
 
 export const CampaignCard = ({title,pId,owner,amountCollected,descr,target}:{title:string,pId:any,owner:any,amountCollected:any,descr:string,target:string}) => {
     const [open , setopen] = useState(false)
@@ -17,7 +14,6 @@ export const CampaignCard = ({title,pId,owner,amountCollected,descr,target}:{tit
             if(res.error){ return alert(res.error)}
             if (res.success){
                 donate(pId,value).then((res:any)=>res)
-                alert("Amount donated")
             }
         })
             
