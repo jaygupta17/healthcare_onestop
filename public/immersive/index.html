@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peace</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+  <script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="myfont.typeface.js"></script>
+
+</head>
+<body>
+  <a-scene raycaster="far: 100; objects: [link];"
+  cursor="rayOrigin: mouse"
+  camera-position
+  environment
+  info-message="htmlSrc: #messageText">
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+        <a-mixin id="boldFont" text="font: #optimerBoldFont"></a-mixin>
+
+      <img id="sky" src="assets/milky.jpg">
+      <img id="front" src="assets/milky.jpg">
+      <img id="ground" src="assets/grassimage.PNG">
+      <img id="floor" src="assets/ground.png">
+
+      <!--for the check ins part-->
+      <img id="q1" src="assets/q1.png">
+      <img id="q2" src="assets/q2.png">
+      <img id="q3" src="assets/q3.png">
+      <!--portals-->
+      <img id="portal1" src="assets/portal1.jpg">
+      <img id="portal2" src="assets/portal2.jpg">
+      <img id="portal3" src="assets/portal3.jpg">
+      <img id="cosmic1" src="assets/cosmic1.jpg">
+      <img id="wood_curly" src="assets/woodcurly.avif">
+      <img id="roof" src="assets/bedcolour.PNG">
+      <img id="brick" src="assets/brick.PNG">
+      <img id="grid" src="assets/maij.PNG">
+      <img id="info1" src="assets/bugando.jpg">
+      <img id="info2" src="assets/dora.jpg">
+      <img id="info3" src="assets/Bukumbi.jpg">
+      <img id="info4" src="assets/ajanta_history.jpg">
+      <img id="info5" src="assets/tajmahal_history.avif">
+      <img id="info6" src="assets/indiagate_history.png">
+
+
+    </a-assets>
+
+   <a-camera position="-8 1.6 6" rotation="0 0 0" >
+ </a-camera>
+
+ <a-entity light="type: hemisphere; color: #FFF; intensity: 1" position="-0.5 1 1"></a-entity>
+
+ <a-entity vive-controls="hand: left"></a-entity>
+ <a-entity vive-controls="hand: right"></a-entity>
+ 
+ <a-entity mixin="boldFont" text-geometry="value: welcome to" position="-14.78241 1.85374 0"></a-entity>
+ <a-entity text-geometry="value: virtual room; font: #optimerBoldFont" position="-14.78241 1.2 0"></a-entity>
+
+<a-entity mixin="boldFont" text-geometry="value: welcome to" position="-14.78241 1.85374 0"></a-entity>
+<!--info pics at side wall-->
+<a-image src="#info1"position="3.0 2.14038 -9.8"  rotation="0 -90 0"  scale="1.5 1.5 1"></a-image>
+<a-image src="#info2"position="3.0 2.14038 -7.982"  rotation="0 -90 0"  scale="1.5 1.5 1"></a-image>
+<a-image src="#info3"position="3.0 2.14038 -11.982"  rotation="0 -90 0"  scale="2 1.6 1.1"></a-image>
+
+<a-entity mixin="boldFont" text-geometry="value: welcome to" position="-14.78241 1.85374 0"></a-entity>
+<!--info pics at front wall-->
+<a-image src="#info5"position="-2.352 2.1653 -13.3"  scale="2 1.5 1"></a-image>
+<a-image src="#info4"position="-0.252 1.9 -13.3"   scale="2 1.5 1"></a-image>
+<a-image src="#info6"position="1.8 2.1653 -13.3"    scale="2 1.6 1.1"></a-image>
+
+    <a-sky src="#sky" position="0 200 0" material="" geometry=""></a-sky>    
+
+
+    <a-box src="#wood_curly" position="-0.352 2.1653 -13.55404" rotation="" color="#FFF" material="" geometry="" scale="7 4 0.1"></a-box>
+    <a-box src="#brick" position="-2.53073 2.192 -6.55848" rotation="" color="#FFF" material="" geometry="" scale="2.5 4 0.1"></a-box>
+    <a-box src="#brick" position="1.9653 2.192 -6.55848" rotation="" color="#FFF" material="" geometry="" scale="2.5 4 0.1"></a-box>
+    <a-box src="#wood_curly"position="-3.77169 2.17956 -9.95057" color="#FFF" rotation="0 90 0" color="#4CC3D9" material="" geometry="" scale="7 4 0.1"></a-box>
+    <a-box src="#wood_curly" position="3.1866 2.14038 -9.982" color="#FFF" rotation="0 90 0" color="#4CC3D9" material="" geometry="" scale="7 4 0.1"></a-box>
+
+    <a-box src="#roof" position="-0.32937 4.16961 -9.982" rotation="90 0 0" repeat="2 2" color="#FFF" material="" geometry="" scale="8 8 0.1"></a-box>
+ 
+    <a-box src="#ground" position="-0.32937 0.2 -9.982" rotation="90 0 0" repeat="3 3" color="#FFF" material="" geometry="" scale="7 7  0.1"></a-box>
+
+<!--magic portals-->
+<a-link   href="https://www.360cities.net/image/bukumbi-hospital-operating-room-tanzania/vr" target="_blank" title="Bukumbi Hospital" rotation="0 90 0" position="-3 1.93886 -12.45811" image="#portal1" scale="0.5 0.5 0.5" ></a-link>
+
+<a-link  href="https://www.360cities.net/image/dora-hospital-kuvez/vr" title="Dora Hospital" rotation="0 90 0" position="-3 1.93886 -10.5.45811" image="#portal2" scale="0.5 0.5 0.5"></a-link>
+
+<a-link  href="https://www.360cities.net/image/bugando-hospital-laboratory-tanzania-2/vr" title="Bugando Hospital"rotation="0 90 0" position="-3 1.93886 -8.5.45811" image="#portal3" scale="0.5 0.5 0.5"></a-link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="a-loader-title" style="display: none;">Peace</div><div class="a-loader-title" style="display: none;">Peace</div></a-scene>
+
+  
+</body>
+</html>
