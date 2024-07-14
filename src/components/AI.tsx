@@ -28,7 +28,7 @@ export default function AI() {
 
   return (
     <div className="container relative h-[50%]">
-      <div className="spline-container fixed bg-red-500 bottom-0 right-1 z-10 h-[20%] w-[10%]">
+      <div className="spline-container fixed bottom-0 right-1 z-10 h-[20%] w-[10%]">
         <Spline
           scene="https://prod.spline.design/swFUPPJBxfIdhq9X/scene.splinecode"
           className=""
