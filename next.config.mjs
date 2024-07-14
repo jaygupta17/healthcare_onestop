@@ -6,7 +6,7 @@ const nextConfig = {
           destination:
             process.env.NODE_ENV === 'development'
               ? 'http://localhost:8000/api/:path*'
-              : '', // Ensure this is your Flask app's URL
+              : 'https://mediflask.vercel.app',
         },
       ];
     },
