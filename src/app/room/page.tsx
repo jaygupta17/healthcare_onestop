@@ -8,10 +8,10 @@ const ComplaintPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/immersive/index.html'); // Use replace instead of push
+    router.replace('/immersive/index.html');
   }, [router]);
 
-  return null; // This component does not need to render anything
+  return null;
 };
 
 export default ComplaintPage;

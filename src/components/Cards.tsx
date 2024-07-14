@@ -18,7 +18,7 @@ export function EvervaultCardDemo() {
     {
       title: "AI",
       description: "AI based healthcare assistant for personalized healthcare solutions.",
-      link: "/chatbot"
+      link: "/ai"
     }
   ];
 
