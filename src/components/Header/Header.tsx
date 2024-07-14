@@ -39,8 +39,6 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact Us</NavLink>
           <NavLink href="/complaint">Complaint</NavLink>
         </nav>
 
@@ -60,8 +58,6 @@ const Header: React.FC = () => {
         <div className="md:hidden mt-4 px-4">
           <nav className="flex flex-col gap-4">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/contact">Contact Us</NavLink>
             <NavLink href="/complaint">Complaint</NavLink>
           </nav>
           <div className="mt-4">
